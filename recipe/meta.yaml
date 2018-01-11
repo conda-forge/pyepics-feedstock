@@ -19,9 +19,12 @@ requirements:
   build:
       - python
       - setuptools
+      - numpy
+      - pyparsing
 
   run:
       - python
+      - setuptools
       - numpy
       - pyparsing
 
