@@ -14,7 +14,9 @@ Summary: Python interface to Epics Channel Access
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/pyepics-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyepics-feedstock)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyepics-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyepics-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyepics-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyepics-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyepics-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyepics-feedstock/branch/master)
 
 Current release info
 ====================
