@@ -1,27 +1,30 @@
 {% set name = "pyepics" %}
-{% set version = "3.2.6" %}
-{% set sha256 = "630ac60bf9362a758211cfd3af4e62c9a0a394af6e5674aababdf6c857ad34a5" %}
+{% set version = "3.3.1" %}
+{% set sha256 = "f66ae493ab4ba45d16f3428bc669615b050c21c5fe648751b2d6d96b36d67b5c" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/pyepics/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+   fn: {{ name }}-{{ version }}.tar.gz
+   url: https://github.com/pyepics/{{ name }}/archive/{{ version }}.tar.gz
+   sha256: {{ sha256 }}
 
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
-  skip: True  # [win]
 
 requirements:
   build:
       - python
       - setuptools
+      - numpy
+      - pyparsing
+
   run:
       - python
+      - setuptools
       - numpy
       - pyparsing
 
