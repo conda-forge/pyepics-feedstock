@@ -14,14 +14,15 @@ Summary: Python interface to Epics Channel Access
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyepics-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pyepics-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyepics-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyepics-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyepics-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyepics-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pyepics-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pyepics-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyepics/badges/version.svg)](https://anaconda.org/conda-forge/pyepics)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pyepics/badges/downloads.svg)](https://anaconda.org/conda-forge/pyepics)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyepics-green.svg)](https://anaconda.org/conda-forge/pyepics) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyepics.svg)](https://anaconda.org/conda-forge/pyepics) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyepics.svg)](https://anaconda.org/conda-forge/pyepics) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyepics.svg)](https://anaconda.org/conda-forge/pyepics) |
 
 Installing pyepics
 ==================
