@@ -1,6 +1,6 @@
 {% set name = "pyepics" %}
-{% set version = "3.3.1" %}
-{% set sha256 = "974ac82a83be7b7a8783589c2343a7938f8390f65e5017097c3b1f30b60f9dde" %}
+{% set version = "3.3.3" %}
+{% set sha256 = "0ec2006a932246dd58b44f2ce122b70ca7c44f63ef2722aa59246cf2ea0f63e1" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
    sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
