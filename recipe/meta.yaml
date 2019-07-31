@@ -10,6 +10,8 @@ source:
    fn: {{ name }}-{{ version }}.tar.gz
    url: https://github.com/pyepics/{{ name }}/archive/{{ version }}.tar.gz
    sha256: {{ sha256 }}
+   patches:
+     - libca.patch
 
 build:
   number: 1
