@@ -15,24 +15,35 @@ source:
 
 build:
   number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 1
+  script: |
+      export NOLIBCA=1
+      echo "Using LIBCA from $PYEPICS_LIBCA"
+      rm -rf epics/clibs
+      "{{ PYTHON }} -m pip install . --no-deps -vv"
+
 
 requirements:
   host:
       - python
       - pip
   run:
-      - python
-      - pip
+      - epics-base
       - numpy
+      - pip
       - pyparsing
+      - python
 
 test:
   imports:
     - epics
     - epics.autosave
+    - epics.ca
     - epics.compat
     - epics.devices
+
+    commands:
+      - {{ PYTHON }} -c "import epics.ca; libca = epics.ca.find_libca(); assert 'lib' in libca; import os; assert epics.ca.find_libca().startswith(os.environ['CONDA_PREFIX']); assert 'clibs' not in epics.ca.find_libca()"
 
 about:
   home: http://pyepics.github.io/pyepics/
