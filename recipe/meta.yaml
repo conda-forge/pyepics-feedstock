@@ -24,14 +24,14 @@ build:
 
 requirements:
   host:
-      - python
-      - pip
+    - python
+    - pip
   run:
-      - epics-base
-      - numpy
-      - pip
-      - pyparsing
-      - python
+    - epics-base
+    - numpy
+    - pip
+    - pyparsing
+    - python
 
 test:
   imports:
@@ -41,8 +41,8 @@ test:
     - epics.compat
     - epics.devices
 
-    commands:
-      - {{ PYTHON }} -c "import epics.ca; libca = epics.ca.find_libca(); assert 'lib' in libca; import os; assert epics.ca.find_libca().startswith(os.environ['CONDA_PREFIX']); assert 'clibs' not in epics.ca.find_libca()"
+  commands:
+    - {{ PYTHON }} -c "import epics.ca; libca = epics.ca.find_libca(); assert 'lib' in libca; import os; assert epics.ca.find_libca().startswith(os.environ['CONDA_PREFIX']); assert 'clibs' not in epics.ca.find_libca()"
 
 about:
   home: http://pyepics.github.io/pyepics/
