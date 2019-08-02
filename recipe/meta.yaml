@@ -14,8 +14,7 @@ source:
      - libca.patch
 
 build:
-  number: 1
-  number: 1
+  number: 2
   script: |
       export NOLIBCA=1
       echo "Using LIBCA from $PYEPICS_LIBCA"
