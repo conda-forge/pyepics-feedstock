@@ -15,7 +15,7 @@ source:
      - epicscorelibs.patch
 
 build:
-  number: 2 
+  number: 2
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -24,10 +24,10 @@ requirements:
       - pip
   run:
       - python
-      - pip
-      - numpy
-      - pyparsing
       - epicscorelibs
+      - numpy
+      - pip
+      - pyparsing
 
 test:
   imports:
