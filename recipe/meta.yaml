@@ -12,9 +12,10 @@ source:
    sha256: {{ sha256 }}
    patches:
      - libca.patch
+     - epicscorelibs.patch
 
 build:
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -23,8 +24,9 @@ requirements:
       - pip
   run:
       - python
-      - pip
+      - epicscorelibs
       - numpy
+      - pip
       - pyparsing
 
 test:

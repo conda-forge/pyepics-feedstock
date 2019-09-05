@@ -1,0 +1,17 @@
+diff --git a/epics/__init__.py b/epics/__init__.py
+index 3ee46fe..362efce 100644
+--- a/epics/__init__.py
++++ b/epics/__init__.py
+@@ -26,6 +26,12 @@ __doc__ = """
+ import time
+ import sys
+ import threading
++
++try:
++    import epicscorelibs.path.pyepics
++except ImportError:
++    pass
++
+ from . import ca
+ from . import dbr
+ from . import pv
