@@ -1,6 +1,6 @@
 {% set name = "pyepics" %}
-{% set version = "3.4.0" %}
-{% set sha256 = "a2913ee5fdab9dfb3d50c0ccb83f7129902e6fdc7ce9c4c1cc9d0d4b2f9c0438" %}
+{% set version = "3.4.1" %}
+{% set sha256 = "d3dfb10e7c05b290dd07de333d6d24fab9af3dd56ba4b2b4234b088ae94b8c47" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
      - epicscorelibs.patch
 
 build:
-  number: 2
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -47,7 +47,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
     - jrmlhermitte
     - stuartcampbell
     - mrakitin
