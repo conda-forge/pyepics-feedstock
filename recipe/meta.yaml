@@ -1,6 +1,6 @@
 {% set name = "pyepics" %}
 {% set version = "3.4.1" %}
-{% set sha256 = "d3dfb10e7c05b290dd07de333d6d24fab9af3dd56ba4b2b4234b088ae94b8c47" %}
+{% set sha256 = "a995685638c01a9326d3414de9b5471fb7b0bf6b1c60de1efae778c25dedaabf" %}
 
 package:
   name: {{ name|lower }}
@@ -10,13 +10,9 @@ source:
    fn: {{ name }}-{{ version }}.tar.gz
    url: https://github.com/pyepics/{{ name }}/archive/{{ version }}.tar.gz
    sha256: {{ sha256 }}
-   patches:
-     - libca.patch
-     - epicscorelibs.patch
 
 build:
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 1
 
 requirements:
   host:
@@ -24,9 +20,10 @@ requirements:
       - pip
   run:
       - python
-      - epicscorelibs
+      # pkg_resources used in epics/ca.py
+      - setuptools
+      - epics-base
       - numpy
-      - pip
       - pyparsing
 
 test:
@@ -35,6 +32,8 @@ test:
     - epics.autosave
     - epics.compat
     - epics.devices
+  commands:
+    - python -c "import epics; epics.ca.find_libca()"
 
 about:
   home: http://pyepics.github.io/pyepics/
