@@ -44,7 +44,8 @@ about:
 
 extra:
   recipe-maintainers:
-    - jrmlhermitte
-    - stuartcampbell
-    - mrakitin
     - hhslepicka
+    - jrmlhermitte
+    - mrakitin
+    - stuartcampbell
+    - tacaswell
