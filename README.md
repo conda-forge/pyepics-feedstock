@@ -212,7 +212,7 @@ Feedstock Maintainers
 =====================
 
 * [@hhslepicka](https://github.com/hhslepicka/)
-* [@jrmlhermitte](https://github.com/jrmlhermitte/)
 * [@mrakitin](https://github.com/mrakitin/)
 * [@stuartcampbell](https://github.com/stuartcampbell/)
+* [@tacaswell](https://github.com/tacaswell/)
 
