@@ -1,9 +1,9 @@
 About pyepics
 =============
 
-Home: http://pyepics.github.io/pyepics/
+Home: https://pyepics.github.io/pyepics/
 
-Package license: Epics Open
+Package license: EPICS
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyepics-feedstock/blob/master/LICENSE.txt)
 
@@ -11,7 +11,7 @@ Summary: Python interface to Epics Channel Access
 
 Development: https://github.com/pyepics/pyepics
 
-Documentation: http://pyepics.github.io/pyepics
+Documentation: https://pyepics.github.io/pyepics
 
 Current build status
 ====================
