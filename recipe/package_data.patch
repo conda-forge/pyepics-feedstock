@@ -1,0 +1,36 @@
+diff --git a/setup.py b/setup.py
+index 6021604..2b59ddf 100644
+--- a/setup.py
++++ b/setup.py
+@@ -43,6 +43,21 @@ problem before tyring to use the epics package.
+ """
+ 
+ 
++# determine which pre-compiled clibs to include
++import platform
++mach = platform.machine()
++system = platform.system()
++arch = platform.architecture()
++if system == "Windows":
++    libsrc = 'win'
++else:
++    libsrc = system.lower()
++if mach.startswith('arm'):
++    nbits = 'arm'
++else:
++    nbits = arch[0].replace("bit", "")
++plat = libsrc + nbits
++
+ setup(name = 'pyepics',
+       version = versioneer.get_version(),
+       cmdclass = versioneer.get_cmdclass(),
+@@ -60,8 +75,7 @@ setup(name = 'pyepics',
+                       'Topic :: Scientific/Engineering'],
+       packages = ['epics','epics.wx','epics.devices', 'epics.compat',
+                   'epics.autosave', 'epics.clibs'],
+-      package_data = {'epics.clibs': ['darwin64/*', 'linux64/*', 'linux32/*',
+-                                      'linuxarm/*', 'win32/*', 'win64/*']})
++      package_data = {'epics.clibs': [f"{plat}/*"]})
+ 
+ try:
+     libca = epics.ca.find_libca()
