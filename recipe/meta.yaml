@@ -1,6 +1,6 @@
 {% set name = "pyepics" %}
-{% set version = "3.5.0" %}
-{% set sha256 = "c8154f599ef72ab0d1b49a5c39a76e641ac4f04fc61f3a7294e04e05076c943d" %}
+{% set version = "3.5.1" %}
+{% set sha256 = "a4d0f2d0d163aa34a53f560519f5664a42ba96aeb19bbf92e46228f22fa87ff6" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
     - package_data.patch
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
