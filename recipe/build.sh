@@ -9,3 +9,5 @@ mkdir -p $PREFIX/etc/conda/deactivate.d
 cat <<EOF > $PREFIX/etc/conda/deactivate.d/pyepics_deactivate.sh
 unset PYEPICS_LIBCA
 EOF
+
+rm -r epics/clibs
