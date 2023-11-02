@@ -1,3 +1,6 @@
+# Remove static libraries - we use the libraries from conda-forge
+rm -r epics/clibs
+
 NOLIBCA=1 ${PYTHON} -m pip install . --no-deps -vv
 
 mkdir -p $PREFIX/etc/conda/activate.d
@@ -9,5 +12,3 @@ mkdir -p $PREFIX/etc/conda/deactivate.d
 cat <<EOF > $PREFIX/etc/conda/deactivate.d/pyepics_deactivate.sh
 unset PYEPICS_LIBCA
 EOF
-
-rm -r epics/clibs
