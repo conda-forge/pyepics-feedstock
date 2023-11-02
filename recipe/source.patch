@@ -1,42 +1,24 @@
-From 7d770675620abf636cad60d7113f070b017c0a46 Mon Sep 17 00:00:00 2001
+From 6f826affe0dc5a8b0d9b7754bac705a4ea083fa2 Mon Sep 17 00:00:00 2001
 From: Jan Janssen <janssen@mpie.de>
-Date: Thu, 2 Nov 2023 20:10:37 +0100
-Subject: [PATCH] fix sources
+Date: Thu, 2 Nov 2023 20:23:13 +0100
+Subject: [PATCH] setup.patch
 
 ---
- pyepics.egg-info/SOURCES.txt | 22 ----------------------
- 1 file changed, 22 deletions(-)
+ setup.py | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
 
-diff --git a/pyepics.egg-info/SOURCES.txt b/pyepics.egg-info/SOURCES.txt
-index 9f30dea..37d258c 100644
---- a/pyepics.egg-info/SOURCES.txt
-+++ b/pyepics.egg-info/SOURCES.txt
-@@ -49,28 +49,6 @@ epics/pv.py
- epics/utils.py
- epics/autosave/__init__.py
- epics/autosave/save_restore.py
--epics/clibs/__init__.py
--epics/clibs/darwin64/README
--epics/clibs/darwin64/libComPYEPICS.dylib
--epics/clibs/darwin64/libca.dylib
--epics/clibs/linux32/README
--epics/clibs/linux32/libComPYEPICS.so
--epics/clibs/linux32/libca.so
--epics/clibs/linux64/README
--epics/clibs/linux64/libComPYEPICS.so
--epics/clibs/linux64/libca.so
--epics/clibs/linuxarm/README
--epics/clibs/linuxarm/libComPYEPICS.so
--epics/clibs/linuxarm/libca.so
--epics/clibs/win32/Com.dll
--epics/clibs/win32/README
--epics/clibs/win32/ca.dll
--epics/clibs/win32/caRepeater.exe
--epics/clibs/win32/carepeater.exe
--epics/clibs/win64/Com.dll
--epics/clibs/win64/README
--epics/clibs/win64/ca.dll
--epics/clibs/win64/caRepeater.exe
- epics/compat/CaChannel.py
- epics/compat/__init__.py
- epics/compat/ca_util.py
+diff --git a/setup.py b/setup.py
+index 7938f86..019d722 100644
+--- a/setup.py
++++ b/setup.py
+@@ -59,9 +59,7 @@
+                       'Programming Language :: Python',
+                       'Topic :: Scientific/Engineering'],
+       packages = ['epics','epics.wx','epics.devices', 'epics.compat',
+-                  'epics.autosave', 'epics.clibs'],
+-      package_data = {'epics.clibs': ['darwin64/*', 'linux64/*', 'linux32/*',
+-                                      'linuxarm/*', 'win32/*', 'win64/*']},
++                  'epics.autosave'],
+       install_requires = ['setuptools']
+       )
+ 
