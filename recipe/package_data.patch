@@ -1,24 +1,30 @@
-From 6f826affe0dc5a8b0d9b7754bac705a4ea083fa2 Mon Sep 17 00:00:00 2001
+From abad46e5a220895b8b55d4c8e975dae42a3a340b Mon Sep 17 00:00:00 2001
 From: Jan Janssen <janssen@mpie.de>
-Date: Thu, 2 Nov 2023 20:23:13 +0100
-Subject: [PATCH] setup.patch
+Date: Thu, 2 Nov 2023 21:07:14 +0100
+Subject: [PATCH] setup
 
 ---
- setup.py | 4 +---
- 1 file changed, 1 insertion(+), 3 deletions(-)
+ setup.cfg | 7 -------
+ 1 file changed, 7 deletions(-)
 
-diff --git a/setup.py b/setup.py
-index 7938f86..019d722 100644
---- a/setup.py
-+++ b/setup.py
-@@ -59,9 +59,7 @@
-                       'Programming Language :: Python',
-                       'Topic :: Scientific/Engineering'],
-       packages = ['epics','epics.wx','epics.devices', 'epics.compat',
--                  'epics.autosave', 'epics.clibs'],
--      package_data = {'epics.clibs': ['darwin64/*', 'linux64/*', 'linux32/*',
--                                      'linuxarm/*', 'win32/*', 'win64/*']},
-+                  'epics.autosave'],
-       install_requires = ['setuptools']
-       )
- 
+diff --git a/setup.cfg b/setup.cfg
+index b24bd12..12de125 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -54,16 +54,9 @@ packages =
+ 	epics
+ 	epics.autosave
+ 	epics.compat
+-	epics.clibs
+ 	epics.devices
+ 	epics.qt
+ 	epics.wx
+-	epics.clibs.darwin64
+-	epics.clibs.linux64
+-	epics.clibs.linux32
+-	epics.clibs.linuxarm
+-	epics.clibs.win64
+-	epics.clibs.win32
+ install_requires = 
+ 	setuptools
+ 	numpy
