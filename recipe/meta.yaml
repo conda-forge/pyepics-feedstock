@@ -1,19 +1,18 @@
 {% set name = "pyepics" %}
 {% set version = "3.5.2" %}
-{% set sha256 = "9680af5970c3f4714dd97d33fe13a833d79ae370f69f774889df51c0e4790187" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyepics-{{ version }}.tar.gz
+  sha256: 9680af5970c3f4714dd97d33fe13a833d79ae370f69f774889df51c0e4790187
   patches:
     - package_data.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -21,6 +20,8 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
+    - setuptools >=45
+    - setuptools-scm >=6.2
     - pip
   run:
     - python
@@ -38,6 +39,9 @@ test:
     - epics.devices
   commands:
     - python -c "import epics; epics.ca.find_libca()"
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://pyepics.github.io/pyepics/

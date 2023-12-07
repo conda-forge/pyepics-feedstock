@@ -11,3 +11,4 @@ provider:
 test: native_and_emulated
 bot:
   automerge: true
+  inspection: update-grayskull
