@@ -1,5 +1,5 @@
 {% set name = "pyepics" %}
-{% set version = "3.5.2" %}
+{% set version = "3.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyepics-{{ version }}.tar.gz
-  sha256: 9680af5970c3f4714dd97d33fe13a833d79ae370f69f774889df51c0e4790187
+  sha256: d14b7fb8093fdcb1b54a51b46fbd511e4a4c380ee78a63c18c459663b75e1dfa
   patches:
     - package_data.patch
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
