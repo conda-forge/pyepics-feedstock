@@ -1,17 +1,17 @@
-From abad46e5a220895b8b55d4c8e975dae42a3a340b Mon Sep 17 00:00:00 2001
+From ddfe6f9067648e1018b0be538090f6b0df2ba2ce Mon Sep 17 00:00:00 2001
 From: Jan Janssen <janssen@mpie.de>
-Date: Thu, 2 Nov 2023 21:07:14 +0100
-Subject: [PATCH] setup
+Date: Wed, 12 Jun 2024 12:41:53 +0200
+Subject: [PATCH] [PATCH] setup
 
 ---
- setup.cfg | 7 -------
- 1 file changed, 7 deletions(-)
+ setup.cfg | 8 --------
+ 1 file changed, 8 deletions(-)
 
 diff --git a/setup.cfg b/setup.cfg
-index b24bd12..12de125 100644
+index 923cf76..61131d6 100644
 --- a/setup.cfg
 +++ b/setup.cfg
-@@ -54,16 +54,9 @@ packages =
+@@ -54,17 +54,9 @@ packages =
  	epics
  	epics.autosave
  	epics.compat
@@ -20,6 +20,7 @@ index b24bd12..12de125 100644
  	epics.qt
  	epics.wx
 -	epics.clibs.darwin64
+-	epics.clibs.darwinarm64
 -	epics.clibs.linux64
 -	epics.clibs.linux32
 -	epics.clibs.linuxarm
