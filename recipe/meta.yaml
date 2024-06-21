@@ -30,6 +30,7 @@ requirements:
     - epics-base
     - numpy
     - pyparsing
+    - importlib_resources
 
 test:
   imports:
