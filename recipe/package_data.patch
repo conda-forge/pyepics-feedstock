@@ -1,31 +1,26 @@
-From ddfe6f9067648e1018b0be538090f6b0df2ba2ce Mon Sep 17 00:00:00 2001
-From: Jan Janssen <janssen@mpie.de>
-Date: Wed, 12 Jun 2024 12:41:53 +0200
-Subject: [PATCH] [PATCH] setup
+From 54982412243cf00b89ea562d2170fc5c191ae9ef Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Fri, 13 Jun 2025 08:25:24 -0600
+Subject: [PATCH] Update pyproject.toml
 
 ---
- setup.cfg | 8 --------
- 1 file changed, 8 deletions(-)
+ pyproject.toml | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
 
-diff --git a/setup.cfg b/setup.cfg
-index 923cf76..61131d6 100644
---- a/setup.cfg
-+++ b/setup.cfg
-@@ -54,17 +54,9 @@ packages =
- 	epics
- 	epics.autosave
- 	epics.compat
--	epics.clibs
- 	epics.devices
- 	epics.qt
- 	epics.wx
--	epics.clibs.darwin64
--	epics.clibs.darwinarm64
--	epics.clibs.linux64
--	epics.clibs.linux32
--	epics.clibs.linuxarm
--	epics.clibs.win64
--	epics.clibs.win32
- install_requires = 
- 	setuptools
- 	numpy
+diff --git a/pyproject.toml b/pyproject.toml
+index bafa258..6079755 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -8,11 +8,7 @@ version_scheme = "post-release"
+ 
+ [tool.setuptools.packages.find]
+ include = ["epics", "epics.autosave", "epics.compat", "epics.devices",
+-           "epics.qt", "epics.wx", "epics.wx", "epics.clibs",
+-           "epics.clibs.darwin64", "epics.clibs.darwinarm64",
+-           "epics.clibs.linux64", "epics.clibs.linux32",
+-           "epics.clibs.linuxarm", "epics.clibs.win64",
+-           "epics.clibs.win32"]
++           "epics.qt", "epics.wx", "epics.wx"]
+ 
+ [tool.pytest.ini_options]
+ addopts = "--cov=epics --cov-append --cov-report html"
