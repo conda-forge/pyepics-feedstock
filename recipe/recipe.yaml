@@ -1,0 +1,68 @@
+schema_version: 1
+
+context:
+  name: pyepics
+  version: "3.5.10"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyepics-${{ version }}.tar.gz
+  sha256: f390cf9be40aba757b9528888114bc14d8db01086d0c93914720b1772460375b
+  patches:
+    - package_data.patch
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+  host:
+    - python
+    - setuptools >=45
+    - setuptools-scm >=6.2
+    - pip
+  run:
+    - python
+    # pkg_resources used in epics/ca.py
+    - setuptools
+    - epics-base
+    - numpy >=1.26
+    - pyparsing
+    - importlib_resources
+
+tests:
+  - python:
+      imports:
+        - epics
+        - epics.autosave
+        - epics.compat
+        - epics.devices
+      pip_check: true
+  - requirements:
+      run:
+        - pip
+    script:
+      - python -c "import epics; epics.ca.find_libca()"
+
+about:
+  license: EPICS
+  license_file: LICENSE
+  summary: Python interface to Epics Channel Access
+  homepage: https://pyepics.github.io/pyepics/
+  repository: https://github.com/pyepics/pyepics
+  documentation: https://pyepics.github.io/pyepics
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
+    - hhslepicka
+    - mrakitin
+    - stuartcampbell
+    - tacaswell
