@@ -15,14 +15,14 @@ source:
     - package_data.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
+      then:
+        - python
+        - cross-python_${{ target_platform }}
   host:
     - python
     - setuptools >=45
